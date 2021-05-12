@@ -1,4 +1,4 @@
-DROP dataabase IF EXISTS firmajp24;
+DROP database IF EXISTS firmajp24;
 CREATE database firmajp24;
 use firmajp24;
 
@@ -25,4 +25,16 @@ create table sudjeluje(
 	
 alter table sudjeluje add foreign key (projekt) references projekt(sifra);
 alter table sudjeluje add foreign key (programer) references programer(sifra);
+
+insert into projekt (naziv) values
+	('Projekt');
+
+insert into programer(ime,prezime) values
+	('Stjepan', 'Puškarić');
+	
+insert into sudjeluje(projekt,programer,datumpocetka) values
+	('1','1','2020-12-03');
+
+	
+
 
