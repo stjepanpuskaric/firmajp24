@@ -16,3 +16,12 @@ create table programer(
 	placa decimal(18,2)
 	);
 	
+create table sudjeluje(
+	projekt int not null,
+	programer int not null,
+	datumpocetka datetime,
+	datumkraja datetime
+	);
+	
+alter table sudjeluje add foreign key (projekt) references projekt(sifra);
+alter table sudjeluje add foreign key (programer) references programer(sifra);
